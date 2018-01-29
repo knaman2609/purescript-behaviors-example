@@ -4,7 +4,7 @@ exports.rotate = function(id) {
       var elem = document.querySelectorAll("." + id)[0];
 
       if (direction == "stop") {
-        elem.className = "hex " + id;
+        elem.className = "gear " + id;
       } else {
         elem.className += " rotate " + direction;
       }
@@ -27,10 +27,10 @@ exports.attachEvents = function(id) {
 
       if (window.MAP[id] == 1) {
         window.MAP[id] =  0;
-        elem.querySelectorAll("img")[0].src = "hex.png";
+        elem.querySelectorAll("img")[0].src = "gear.png";
       } else {
         window.MAP[id] =  1;
-        elem.querySelectorAll("img")[0].src = "hex_checked.png";
+        elem.querySelectorAll("img")[0].src = "gear_checked.png";
       }
 
       sub(window.MAP[id])();
